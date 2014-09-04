@@ -1,0 +1,362 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-size: 1em;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 85%;
+	text-align: left;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	.logo {
+		display: block;
+		a {
+			font-size: 1em;
+		}
+	}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav li {
+	width: 23%;
+	text-align: center;
+	margin: 0 12px;
+	border-radius: 0px 0px 15px 0px;
+	box-shadow: -2px -1px 13px 0 #000000;
+	&:hover, &:focus, &:active {
+			a {
+				text-decoration: none;
+				color: invert($white);
+				text-align: center;
+			}
+			&:first-child {
+				background-color: #1BC5AA;
+			}
+
+			&:nth-child(2) {
+				background-color: #F87208;
+			}
+
+			&:last-child {
+				background-color: #C51B6D;
+			}
+	} /* end hover & focus */
+	&:first-child {}
+	&:last-child {
+		margin: 0 30px 0 0;
+	}
+
+	/*
+	plan your menus and drop-downs wisely.
+	*/
+	ul.sub-menu,
+	ul.children {
+		li {
+			a {
+				&:hover,
+				&:focus {}
+				&:link {}
+			}
+			&:first-child {}
+			&:last-child {}
+		}
+	}
+}
+
+.nav {
+	width: 75%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: inline-block;
+	box-shadow: 0 0 2px -2px #000000;
+	color: rgba(1, 1, 1, 0.8);
+	text-align: right;
+		ul {
+			text-align: right;
+			li {
+				width: 100%;
+				background-color: #313131;
+				color: $white;
+				border-radius: 0px 0px 15px 0px;
+				box-shadow: -2px -1px 13px 0 #000000;
+				position: relative;
+				display: inline-block;
+				@include transition(background-color 0.12s ease-in);
+				a {
+					display: inline-block;
+					padding: 10px 6% 14px;
+					font-size: 16px;
+					color: $white;
+					text-decoration: none;			
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+				}
+
+			} /* end .menu ul li */
+
+		} /* end .menu ul */
+} /* end .nav */
+
+/* highlight current page */
+li.current-menu-item {
+	&:first-child {
+		background-color: #1BC5AA;
+	}
+
+	&:nth-child(2) {
+		background-color: #F87208;
+	}
+
+	&:last-child {
+		background-color: #C51B6D;
+	}
+	a {
+		color: invert($white);
+	}
+}
+
+.nav-btn {
+	display: none;
+}
+
+.logo {
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding: 10px 0 13px 0;
+	display: inline-block;
+	background-color: $dark-gray;
+	color: white;
+	border-radius: 0px 0px 15px 0px;
+	&:active {	// adds a tiny hop to the click
+    			top: 1px;
+    		} 
+	@include transition(background-color 0.12s ease-in-out);
+	&:hover {
+			background-color: $white;
+			a {
+				text-decoration: none;
+				color: invert($white);
+				text-align: center;
+			}
+	}
+}
+
+
+/*********************
+CONTENT STYLES
+*********************/
+
+
+.page-title {
+	font-size: 4.5em;
+	color: #fff;
+	margin: 7% 0 1% 0;
+	padding: 0 .15em;
+	text-align: left;
+}
+
+#front-title {
+	text-align: center;
+}
+
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+
+/**************************
+BUTTON STYLE CHANGES
+***************************/
+
+.button-wrapper {
+	float: left;
+	.toggle-btn {
+		max-width: 68%;
+		margin: 2% 5% 1%;
+	}
+}
+
+.wp-caption {
+	max-width: 100%;
+
+	p.wp-caption-text {
+		font-size: 0.95em;
+		margin: -.5em 0 5em 0;
+		text-align: center;
+	}
+}
+
+.button-wrapper .toggle-btn {
+	max-width: 36%;
+	margin: 1% 5% 6%;
+}
+
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+.footer {
+	.copyright {
+	}
+}
+
+.footer, .push {
+	height: 3.5em;
+	clear: both;
+}
+
+
+
+

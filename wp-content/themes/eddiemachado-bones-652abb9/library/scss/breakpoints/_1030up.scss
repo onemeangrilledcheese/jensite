@@ -1,0 +1,136 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It is larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+/* nave changed */
+.nav {
+	width: 75%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: right;
+
+	/* .menu is clearfixed inside mixins.scss */
+	.menu {
+		ul {
+			li {
+				width: 21%;
+				position: relative;
+				text-align: center;
+				display: inline-block;
+				margin: 0 20px;
+				a {
+
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+
+					}
+				}
+
+				&:first-child {}
+				&:last-child {
+					margin: 0 150px 0 0;
+				}
+
+				/*
+				plan your menus and drop-downs wisely.
+				*/
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .menu ul li */
+
+			/* highlight current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+	} /* end .menu */
+} /* end .nav */	
+
+.nav li {
+	&:last-child {}
+}
+
+
+.button-wrapper {
+	margin: 0 15%;
+}
+
+.button-wrapper .toggle-btn {
+	max-width: 28%;
+	margin: 1% 3% 6% 4%;
+}
+
+#content {
+	margin-top: 1.5em 0;
+
+}
+
+.entry-content {
+	margin: 0 9.5em;
+}
+
+.works-content {
+	margin: 0 10px;
+}
+
+.hentry {
+
+	header {
+		padding: 0.5em 9.2em 1.5em;
+	}
+
+	footer {
+		padding: 1.5em;
+
+		p {
+			margin: 0;
+		}
+	}
+
+} /* end .hentry */
+
+.page-title {
+	font-size: 5.7em;
+	color: $white;
+	padding: 0;
+}
+
+/* create rows of three through flex diplay for image (
+ 	- set only for graphic for now 
+ */
+
+.graphic {
+	.wp-caption { 
+		max-width: 33%;
+	}
+}
+
+.footer {
+	.copyright {
+		text-align: center;
+		padding-left: 10%;
+	}
+}

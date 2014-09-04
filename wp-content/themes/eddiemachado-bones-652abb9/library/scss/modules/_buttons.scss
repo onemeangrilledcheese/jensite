@@ -1,0 +1,129 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+%btn {
+  border: none;
+  background: $dark-gray;
+  position: relative;
+  top: 0;
+  height: auto;
+  margin: auto;
+  /* Adds shadow to the bottom of the bar */
+  box-shadow: 0 0 8px -2px #000000;
+  color: rgba(1, 1, 1, 0.8);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  @include transition(background-color 0.12s ease-in);
+  // hovering on the btn
+    &:hover, &:focus {
+      background-color: invert($black);
+      text-decoration: none;
+      text-align: center;
+    } // end hover
+} // end .button
+
+/*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+    .blue-btn {
+      @extend %btn; // here we load the btn defaults
+      background-color: $blue;
+      &:hover,
+      &:focus {
+        background-color: darken($blue, 4%);
+      } // end hover
+      &:active {
+        background-color: darken($blue, 5%);
+      } // end active
+    } // end blue button
+*/
+
+
+/*
+Toggling button styles for use in jquery.
+Styling the toggled content.
+*/
+
+.toggle-btn {
+  @extend %btn;
+  color: $white;
+  margin: 0px auto 0px auto;
+  border-radius: 0 6px 6px 6px;
+  text-align: center;
+  position:relative;
+  float: left;
+  &:hover, &:focus {
+    background-color: #EBE20D;
+    color: invert($white);
+  }
+}
+
+button #graphic-btn {}
+
+.active {
+  background-color: #EBE20D;
+  color: invert($white);
+}
+
+.graphic {
+  display: none;
+  text-align: center;
+}
+
+
+// this will make sure content not displayed before the content.
+.toggle-display {
+  display: none;
+}
+
+/*
+handling style for groups of buttons (alignment within page, etc.)
+*/
+
+
+.button-wrapper {
+  float: left;
+  width: 100%;
+    .toggle-btn {
+      width: 50%;
+      height: 50px;
+      margin: 3% 4% 0;
+      // pressing the btn
+      &:active {
+        box-shadow: none;
+        top: 1px;
+      } // end press 
+    }
+}
+
+
+
+
+
+
+
