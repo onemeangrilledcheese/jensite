@@ -1,0 +1,7 @@
+0000.009 (0) Opened log file at time: Fri, 05 Sep 2014 03:15:54 +0000 on http://jennifermitchellart.dev
+0000.015 (0) UpdraftPlus WordPress backup plugin (http://updraftplus.com): 1.9.19 WP: 4.0 PHP: 5.5.9-1ubuntu4.3 (Linux vvv 3.13.0-29-generic #53-Ubuntu SMP Wed Jun 4 21:00:20 UTC 2014 x86_64) MySQL:  Server: nginx/1.6.1 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 14M | 14.3M) multisite: N mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.019 (0) Free space on disk containing Updraft's temporary directory: 31160.5 Mb
+0000.036 (0) Tasks: Backup files:  (schedule: weekly) Backup DB: 1 (schedule: weekly)
+0000.038 (0) Processed schedules. Tasks now: Backup files:  Backup DB: 
+0000.039 (0) No email will be sent - this backup set was empty.
+0000.041 (0) The backup apparently succeeded and is now complete

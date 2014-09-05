@@ -1013,7 +1013,10 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.toggle-btn, .comment-reply-link, #submit {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"], .toggle-btn, .comment-reply-link, #submit {
   border: none;
   background: #313131;
   position: relative;
@@ -1029,7 +1032,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   -webkit-transition: background-color 0.12s ease-in;
   transition: background-color 0.12s ease-in;
 }
-.toggle-btn:hover, .comment-reply-link:hover, #submit:hover, .toggle-btn:focus, .comment-reply-link:focus, #submit:focus {
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover, .toggle-btn:hover, .comment-reply-link:hover, #submit:hover, button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus, .toggle-btn:focus, .comment-reply-link:focus, #submit:focus {
   background-color: #ebebeb;
   text-decoration: none;
   text-align: center;
@@ -1051,6 +1060,33 @@ and it will create a button dependant on those variables.
       } // end active
     } // end blue button
 */
+/*
+Submit button styles for use in forms
+*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 2px;
+  background: #fff;
+}
+button:hover, button:focus,
+html input[type="button"]:hover,
+html input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #51b138;
+}
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #3f8a2c;
+}
+
 /*
 Toggling button styles for use in jquery.
 Styling the toggled content.
@@ -1140,8 +1176,10 @@ textarea,
   height: 40px;
   line-height: 40px;
   padding: 0 12px;
+  margin-top: 5px;
   margin-bottom: 14px;
   font-size: 1em;
+  font-weight: 300;
   color: #fff;
   border-radius: 3px;
   vertical-align: middle;
@@ -1188,7 +1226,7 @@ textarea:focus,
 textarea:active,
 .field:focus,
 .field:active {
-  background-color: #2e2e2e;
+  background-color: #3a3a3a;
 }
 input[type="text"].error, input[type="text"].is-invalid,
 input[type="password"].error,
@@ -1378,7 +1416,7 @@ textarea.is-disabled:active,
 }
 
 textarea {
-  max-width: 100%;
+  max-width: 500px;
   min-height: 120px;
   line-height: 1.5em;
 }
@@ -1817,6 +1855,12 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
+/* reset loading gif to natural size */
+div.wpcf7 img.ajax-loader {
+  width: 25px;
+  height: 25px;
+}
+
 /* setting normal width (easier to not affect custom page templates) */
 .normal-content {
   max-width: 900px;

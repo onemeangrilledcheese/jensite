@@ -42,8 +42,10 @@ textarea,
   height: 40px;
   line-height: 40px;
   padding: 0 12px;
+  margin-top: 5px;
   margin-bottom: 14px;
   font-size: 1em;
+  font-weight: 300;
   color: $text-color;
   border-radius: 3px;
   vertical-align: middle;
@@ -59,7 +61,7 @@ textarea,
   // a focused input (or hovered on)
   &:focus,
   &:active {
-    background-color: lighten($black, 10%);
+    background-color: lighten($black, 15%);
   } // end hover or focus
 
   // error notification
@@ -104,7 +106,7 @@ textarea,
 
 // textareas
 textarea {
-  max-width: 100%;
+  max-width: 500px;
   min-height: 120px;
   line-height: 1.5em;
 }

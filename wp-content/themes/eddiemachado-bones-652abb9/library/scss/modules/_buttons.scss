@@ -63,6 +63,26 @@ and it will create a button dependant on those variables.
     } // end blue button
 */
 
+/*
+Submit button styles for use in forms
+*/
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    @extend %btn;
+    padding: 10px 20px;
+    border-radius: 2px;
+    background: $white;
+    &:hover, &:focus {
+      background-color: $green;
+    }
+    &:active {
+      background-color: darken($green, 10%);
+    }
+}
+
 
 /*
 Toggling button styles for use in jquery.

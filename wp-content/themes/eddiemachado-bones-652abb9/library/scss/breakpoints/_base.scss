@@ -546,6 +546,13 @@ POSTS & CONTENT STYLES
 } /* end .entry-content */
 
 
+/* reset loading gif to natural size */
+div.wpcf7 img.ajax-loader {
+	width: 25px;
+	height: 25px;
+}
+
+
 /* setting normal width (easier to not affect custom page templates) */
 .normal-content {
 	max-width: 900px;
